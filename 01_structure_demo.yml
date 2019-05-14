@@ -6,6 +6,7 @@ stages:
       - script: echo "Starting Tests"
       - script: echo "Test done"
   - job: RunWebApp
+    dependsOn: TestWebApp
     steps:
       - script: echo "Build WebApp"
       - script: echo "Run WebApp"
