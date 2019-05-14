@@ -1,0 +1,17 @@
+trigger: none
+
+stages:
+- stage: DEV
+  jobs:
+  - job: Linux
+    pool:
+      vmImage: ubuntu-16.04
+    steps:
+      - script: go test
+      - script: go build
+  - job: Windows
+    pool:
+      vmImage: windows-2019
+    steps:
+      - script: go test
+      - script: go build
