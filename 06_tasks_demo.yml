@@ -63,3 +63,4 @@ stages:
         inputs:
           pathtoPublish: '$(Build.ArtifactStagingDirectory)'
           artifactName: SimpleWebApp-Windows
+
