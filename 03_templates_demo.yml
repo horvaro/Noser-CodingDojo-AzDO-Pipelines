@@ -1,0 +1,15 @@
+variables:
+- name: GO_VERSION
+  value: 1.11
+- group: rho-variables-dojo-1
+
+stages:
+- template: pipelines/stage_template.yml
+  parameters:
+    name: DEV
+    target: dev.demoapp.noser.com
+
+- template: pipelines/stage_template.yml
+  parameters:
+    name: INT
+    target: int.demoapp.noser.com
